@@ -1,0 +1,322 @@
+[
+  {
+    "id": "monstera",
+    "common_name": "Swiss Cheese Plant",
+    "scientific_name": "Monstera deliciosa",
+    "family": "Araceae",
+    "order": "Alismatales",
+    "native_region": "Tropical rainforests of Southern Mexico to Panama",
+    "flowering_season": "Summer (rare indoors)",
+    "habitat": "Dense tropical rainforest understory, climbing on trees",
+    "conservation_status": "Not Evaluated",
+    "sunlight_requirement": "Bright indirect sunlight",
+    "water_requirement": "Moderate (allow topsoil to dry)",
+    "zone_id": "zone_tropical",
+    "zone_name": "Tropical Rainforest Conservatory",
+    "garden_coords": {"lat": 51.4796, "lng": -0.2978, "x": 380, "y": 180},
+    "description": "Monstera deliciosa is an iconic evergreen epiphytic vine famous for its glossy, perforated heart-shaped leaves that develop natural holes (fenestrations) to withstand torrential rain and wind in rainforest canopies.",
+    "key_features": [
+      "Large perforated fenestrated foliage",
+      "Stout aerial climbing roots",
+      "Spadix inflorescence surrounded by a cream-white spathe",
+      "Deep emerald green hue with waxy sheen"
+    ],
+    "medicinal_uses": "In traditional Mesoamerican medicine, aerial root decoctions were used for arthritis relief, though leaves contain calcium oxalate crystals and are toxic if ingested raw.",
+    "fun_facts": [
+      "The species name 'deliciosa' refers to its edible cone-like fruit, which tastes like a blend of banana, pineapple, and mango when fully ripe.",
+      "Young leaves are solid without holes; fenestrations appear as the plant matures and seeks sunflecks through forest canopies."
+    ],
+    "audio_guide_text": "Welcome to the Tropical Conservatory. Before you stands Monstera deliciosa, commonly called the Swiss Cheese Plant. Notice the broad fenestrations across the leaves — these natural perforations allow sunlight to filter through to lower leaves while reducing drag during tropical storms.",
+    "poi_near": "Cloud Forest Mist Pavilion",
+    "color_profile": "Deep glossy green, cream spathe",
+    "prcv_visual_notes": "Identifiable by high green channel saturation, large connected contour area with high solidity variations due to internal holes (fenestrations), and characteristic asymmetric lobed margins."
+  },
+  {
+    "id": "rose",
+    "common_name": "Heritage French Rose",
+    "scientific_name": "Rosa gallica",
+    "family": "Rosaceae",
+    "order": "Rosales",
+    "native_region": "Southern and Central Europe east to Turkey",
+    "flowering_season": "Late Spring to Early Summer",
+    "habitat": "Sunlit meadows, scrublands, open woodland edges",
+    "conservation_status": "Least Concern",
+    "sunlight_requirement": "Full Sun (6+ hours)",
+    "water_requirement": "Moderate, well-drained soil",
+    "zone_id": "zone_rose",
+    "zone_name": "Heritage Rose Parterre",
+    "garden_coords": {"lat": 51.4785, "lng": -0.2985, "x": 220, "y": 320},
+    "description": "Rosa gallica is one of the earliest cultivated rose species in antiquity, celebrated for its velvety deep crimson to magenta petals, intoxicating damask perfume, and medicinal rosehips packed with Vitamin C.",
+    "key_features": [
+      "Multipetal rosettes with golden central stamens",
+      "Prickly bristly stems with glandular hairs",
+      "Compound pinnate leaves with 3-5 ovate leaflets",
+      "Bright scarlet, vitamin C rich hips in autumn"
+    ],
+    "medicinal_uses": "Used for centuries in herbal apothecary (Apothecary's Rose) for soothing skin astringents, aromatic floral syrups, and anti-inflammatory infusions.",
+    "fun_facts": [
+      "King Henry VII adopted the red rose of Lancaster (Rosa gallica officinalis) as his emblem after the Wars of the Roses in 1485.",
+      "The petals retain their sweet fragrance even after being thoroughly dried for potpourri."
+    ],
+    "audio_guide_text": "You have arrived at the Heritage Rose Parterre. The French Rose in front of you represents over two thousand years of horticultural devotion. Take a gentle breath of its fragrance, which comes from aromatic monoterpenes like geraniol and citronellol.",
+    "poi_near": "Sundial Terrace & Pergola",
+    "color_profile": "Velvety crimson, deep magenta, golden core",
+    "prcv_visual_notes": "Strong dominant red-magenta peak in HSV color space (Hue ~330-360°), circular concentric petal boundary contours, and high GLCM energy indicating rich organic petal texture."
+  },
+  {
+    "id": "sunflower",
+    "common_name": "Common Sunflower",
+    "scientific_name": "Helianthus annuus",
+    "family": "Asteraceae",
+    "order": "Asterales",
+    "native_region": "North America",
+    "flowering_season": "Mid-Summer to Autumn",
+    "habitat": "Open plains, prairie grasslands, cultivated agricultural fields",
+    "conservation_status": "Least Concern",
+    "sunlight_requirement": "Full Sun (heliotropic)",
+    "water_requirement": "Moderate to drought-tolerant once established",
+    "zone_id": "zone_meadow",
+    "zone_name": "Sunny Arboretum & Pollinator Meadow",
+    "garden_coords": {"lat": 51.4802, "lng": -0.2945, "x": 750, "y": 140},
+    "description": "Helianthus annuus is a towering annual known for its giant radiant composite flower heads comprising hundreds of tiny disc florets arranged in mesmerizing Fibonacci spirals, ringed by radiant golden ray petals.",
+    "key_features": [
+      "Broad composite head (capitulum) up to 30cm across",
+      "Golden-yellow ray florets encircling brown disc florets",
+      "Coarse, rough, hairy upright stem up to 3 meters tall",
+      "Heart-shaped to ovate serrated leaves"
+    ],
+    "medicinal_uses": "Seeds yield healthy polyunsaturated oils; petals have been used for yellow dyes and herbal poultices.",
+    "fun_facts": [
+      "Young sunflowers demonstrate heliotropism: flower buds track the sun from east to west every day, then face east overnight to await dawn.",
+      "The seed heads exhibit strict mathematical symmetry with florets arranged in intersecting logarithmic spirals conforming to Fibonacci sequences (34/55 or 55/89 spirals)."
+    ],
+    "audio_guide_text": "Step into the Pollinator Meadow. Helianthus annuus stands tall here. What appears to be a single giant blossom is actually a composite head of more than a thousand miniature individual florets working together.",
+    "poi_near": "Apiary & Bee Sanctuary",
+    "color_profile": "Vivid warm yellow, dark bronze/brown center",
+    "prcv_visual_notes": "Distinctive bimodal color distribution with high Hue ~45-60° (golden yellow) contrasted with dark center (low value V), high circularity Hu moment, and radial symmetry."
+  },
+  {
+    "id": "lavender",
+    "common_name": "English Lavender",
+    "scientific_name": "Lavandula angustifolia",
+    "family": "Lamiaceae",
+    "order": "Lamiales",
+    "native_region": "Mediterranean region (Pyrenees and mountains of northern Spain)",
+    "flowering_season": "Early to Mid-Summer",
+    "habitat": "Dry, sunny, rocky limestone slopes",
+    "conservation_status": "Least Concern",
+    "sunlight_requirement": "Full Sun, heat loving",
+    "water_requirement": "Low (drought-tolerant, dislikes wet feet)",
+    "zone_id": "zone_medicinal",
+    "zone_name": "Aromatic & Medicinal Herbarium",
+    "garden_coords": {"lat": 51.4778, "lng": -0.2972, "x": 350, "y": 420},
+    "description": "Lavandula angustifolia is an aromatic evergreen dwarf shrub adorned with slender spikes of lilac-purple blossoms and silvery-green foliage, prized globally for soothing essential oils and culinary gastronomy.",
+    "key_features": [
+      "Elongated terminal spikes of tubular violet flowers",
+      "Narrow linear grey-green leaves with revolute margins",
+      "Square stems characteristic of the mint family",
+      "Abundant glandular trichomes secreting linalool"
+    ],
+    "medicinal_uses": "Extensively studied in aromatherapy and phytotherapy for reducing anxiety, aiding insomnia, calming mild burns, and acting as a natural antimicrobial agent.",
+    "fun_facts": [
+      "The name lavender originates from the Latin verb 'lavare', meaning 'to wash', because Romans heavily infused bathwaters and laundered linens with its blooms.",
+      "Honey made by bees foraging almost exclusively on lavender blossoms is renowned worldwide for its light amber hue and delicate floral taste."
+    ],
+    "audio_guide_text": "Welcome to the Aromatic Garden. Gently stroke the foliage of English Lavender to release essential oil rich in linalool and linalyl acetate, known scientifically for triggering calming neural pathways.",
+    "poi_near": "Aroma Distillation Stillhouse",
+    "color_profile": "Soft purple, lavender, sage-grey foliage",
+    "prcv_visual_notes": "High purple/violet hue representation (Hue ~260-290°), repetitive linear fine-grained texture with high Haralick contrast, and elongated vertical feature contours."
+  },
+  {
+    "id": "lotus",
+    "common_name": "Sacred Lotus",
+    "scientific_name": "Nelumbo nucifera",
+    "family": "Nelumbonaceae",
+    "order": "Proteales",
+    "native_region": "Tropical and temperate Asia to Queensland, Australia",
+    "flowering_season": "Mid-Summer (July - August)",
+    "habitat": "Aquatic ponds, shallow calm lakes, floodplains with nutrient mud",
+    "conservation_status": "Least Concern",
+    "sunlight_requirement": "Full Sun (aquatic)",
+    "water_requirement": "Permanent water depth of 0.3 to 2.5 meters",
+    "zone_id": "zone_aquatic",
+    "zone_name": "Lotus & Water Lily Haven",
+    "garden_coords": {"lat": 51.4789, "lng": -0.2952, "x": 620, "y": 280},
+    "description": "Nelumbo nucifera is an aquatic perennial celebrated in Eastern cultures as a sacred emblem of spiritual purity, emerging pristine above murky marsh waters with spectacular multi-layered pink and white petals.",
+    "key_features": [
+      "Huge peltate leaves held high above water on spiny petioles",
+      "Multi-whorled luminous pink to ivory petals",
+      "Peculiar inverted showerhead seed receptacle",
+      "Ultra-hydrophobic leaf surfaces exhibiting the famous Lotus Effect"
+    ],
+    "medicinal_uses": "Every single part is consumed or utilized: rhizomes (kamal kakdi) are dietary staples, lotus plumule tea cools fevers, and seeds are packed with antioxidants.",
+    "fun_facts": [
+      "The 'Lotus Effect' inspired modern self-cleaning paints and waterproof nanocoatings: microscopic wax papillose crystals cause water droplets to ball up and roll off, sweeping dirt away.",
+      "Viable lotus seeds recovered from an ancient dry lakebed in China successfully germinated after lying dormant for roughly 1,300 years."
+    ],
+    "audio_guide_text": "You are standing by the Lotus Haven. Look closely at how raindrops bead into shimmering mercury-like spheres on Nelumbo nucifera's leaves. This superhydrophobic nanostructure is a marvel of biological engineering.",
+    "poi_near": "Moongate Bridge & Floating Boardwalk",
+    "color_profile": "Pastel pink, pure white, luminous yellow receptacle, emerald pad",
+    "prcv_visual_notes": "Soft pink-white gradients (high value V, moderate saturation S), circular peltate leaf masks with low aspect ratio, and distinct contrast against water backgrounds."
+  },
+  {
+    "id": "aloe_vera",
+    "common_name": "True Aloe",
+    "scientific_name": "Aloe vera",
+    "family": "Asphodelaceae",
+    "order": "Asparagales",
+    "native_region": "Arid Arabian Peninsula",
+    "flowering_season": "Early Spring to Summer",
+    "habitat": "Arid rocky desert slopes, tropical dry scrublands",
+    "conservation_status": "Least Concern",
+    "sunlight_requirement": "Full Sun to bright filtered light",
+    "water_requirement": "Very low (xerophytic succulent)",
+    "zone_id": "zone_succulent",
+    "zone_name": "Arid & Desert Glasshouse",
+    "garden_coords": {"lat": 51.4772, "lng": -0.2982, "x": 260, "y": 510},
+    "description": "Aloe vera is a stemless succulent renowned worldwide for its thick, fleshy, rosette-arranged leaves containing a clear soothing gel loaded with acemannan polysaccharides, vitamins, and minerals.",
+    "key_features": [
+      "Dense rosettes of erect, thick, lanceolate fleshy leaves",
+      "Translucent soft white serrations along leaf edges",
+      "Glaucous grey-green to pale speckles on young specimens",
+      "Tall spike bearing pendulous tubular yellow-orange flowers"
+    ],
+    "medicinal_uses": "One of humanity's oldest botanical remedies, documented in the Ebers Papyrus (1550 BCE) for thermal burns, wound healing, epidermal moisture, and digestive health.",
+    "fun_facts": [
+      "Cleopatra and Nefertiti reputedly utilized aloe vera gel in their daily cosmetic baths to maintain youthful skin.",
+      "Aloe leaves are over 98.5% water, protected from evaporation by a thick waxy cuticle and CAM (Crassulacean Acid Metabolism) nocturnal photosynthesis."
+    ],
+    "audio_guide_text": "Entering the Arid Pavilion, you meet Aloe vera. Its fleshy leaves store water in mucilage tissue, opening stomata exclusively under cover of night to conserve every precious drop of moisture.",
+    "poi_near": "Succulent Rockery Pavilion",
+    "color_profile": "Glaucous grey-green, pale teeth, yellow flower spikes",
+    "prcv_visual_notes": "Serrated sawtooth edge contours (detected via high frequency spatial gradients), sharp pointed lanceolate shapes with high aspect ratio, and subdued muted green-cyan tones."
+  },
+  {
+    "id": "japanese_maple",
+    "common_name": "Japanese Maple",
+    "scientific_name": "Acer palmatum",
+    "family": "Sapindaceae",
+    "order": "Sapindales",
+    "native_region": "Japan, Korea, and Eastern China",
+    "flowering_season": "Mid-Spring (foliage peaks in Autumn)",
+    "habitat": "Temperate mixed deciduous forest understories, rocky hillside valleys",
+    "conservation_status": "Least Concern",
+    "sunlight_requirement": "Dappled sunlight / partial shade",
+    "water_requirement": "Consistent moisture, organically rich acidic soil",
+    "zone_id": "zone_zen",
+    "zone_name": "Zen Bonsai & Japanese Garden",
+    "garden_coords": {"lat": 51.4808, "lng": -0.2968, "x": 490, "y": 90},
+    "description": "Acer palmatum is a graceful deciduous ornamental tree cherished for centuries in traditional Niwaki and Bonsai pruning for its exquisite hand-like palmate leaves that transform into blazing scarlet, amber, and gold displays.",
+    "key_features": [
+      "Deeply 5-, 7-, or 9-lobed hand-shaped leaves",
+      "Delicate weeping habit with sculptural twisted branches",
+      "Small pendulous purple-red spring corymbs",
+      "Paired winged samara seeds (helicopters)"
+    ],
+    "medicinal_uses": "Bark and leaf extracts have traditionally been studied for antioxidant polyphenols and natural anti-inflammatory tannins.",
+    "fun_facts": [
+      "The practice of viewing autumn maple foliage in Japan is known as 'Momijigari', a cultural tradition that has thrived since the Heian period (794–1185 CE).",
+      "Over 1,000 cultivated varieties exist, ranging from dwarf lace-leaf cascading cultivars to towering upright flame maples."
+    ],
+    "audio_guide_text": "You are within the Zen Garden beside a classic Acer palmatum specimen. Observe the delicate, deeply incised 7-lobed leaves. In traditional Japanese garden philosophy, this tree symbolizes the beauty of transient impermanence.",
+    "poi_near": "Raked Sand Zen Courtyard & Red Arch Bridge",
+    "color_profile": "Crimson red, burnt orange, golden amber, deep bronze",
+    "prcv_visual_notes": "Multi-pointed star/palmate contours (7-lobed convexity defects in contour hull analysis), distinctive warm red-orange spectra, and high frequency edge branching."
+  },
+  {
+    "id": "orchid",
+    "common_name": "Moth Orchid",
+    "scientific_name": "Phalaenopsis amabilis",
+    "family": "Orchidaceae",
+    "order": "Asparagales",
+    "native_region": "Southeast Asia, Indonesia, Northern Australia",
+    "flowering_season": "Winter to Late Spring (long-lasting)",
+    "habitat": "Humid lowland tropical rainforests growing epiphytically on tree trunks",
+    "conservation_status": "Protected (CITES Appendix II)",
+    "sunlight_requirement": "Filtered medium light (no direct scorching sun)",
+    "water_requirement": "Weekly soak with bark substrate aeration",
+    "zone_id": "zone_orchid",
+    "zone_name": "Orchidarium & Epiphyte House",
+    "garden_coords": {"lat": 51.4792, "lng": -0.2988, "x": 190, "y": 210},
+    "description": "Phalaenopsis amabilis, the Moth Orchid, is one of the world's most glamorous tropical epiphytes, producing arching sprays of bilateral, moth-like blossoms with a distinct tri-lobed lip and yellow-striped crest.",
+    "key_features": [
+      "Bilateral (zygomorphic) symmetry with 3 sepals and 3 petals",
+      "Specialized tri-lobed labellum (lip) designed as a landing strip for pollinators",
+      "Silvery green aerial velamen roots that absorb atmospheric humidity",
+      "Thick, leathery, dark green basal leaves"
+    ],
+    "medicinal_uses": "Used in traditional Asian herbal remedies; wild populations are protected under strict international conservation treaties.",
+    "fun_facts": [
+      "Swedish naturalist Carl Linnaeus's contemporary Peter Osbeck thought he was seeing a cluster of fluttering moths in the jungle canopy when he first observed Phalaenopsis in 1752.",
+      "The roots possess photosynthetic chlorophyll and are wrapped in velamen—a spongy tissue that captures water vapor directly from humid tropical air."
+    ],
+    "audio_guide_text": "Inside the Orchidarium, look at the elegant arching spikes of Phalaenopsis amabilis. Unlike garden plants, orchids are epiphytes — living high above the ground on trees without taking nutrients from the host trunk.",
+    "poi_near": "Epiphyte Waterfall Wall",
+    "color_profile": "Pristine white, bright magenta-yellow throat, fuchsia accents",
+    "prcv_visual_notes": "Clear bilateral symmetry (can be verified with vertical axis reflection similarity), high contrast labellum lip center, and rounded wide petal contours."
+  },
+  {
+    "id": "cactus",
+    "common_name": "Golden Barrel Cactus",
+    "scientific_name": "Echinocactus grusonii",
+    "family": "Cactaceae",
+    "order": "Caryophyllales",
+    "native_region": "Central Mexico (Hidalgo and Querétaro)",
+    "flowering_season": "Summer (on mature specimens over 20 years old)",
+    "habitat": "Steep rocky volcanic cliffs and canyons in semi-desert scrub",
+    "conservation_status": "Endangered in the wild (abundant in cultivation)",
+    "sunlight_requirement": "Blazing full sun",
+    "water_requirement": "Minimal (dormant in winter)",
+    "zone_id": "zone_succulent",
+    "zone_name": "Arid & Desert Glasshouse",
+    "garden_coords": {"lat": 51.4768, "lng": -0.2975, "x": 310, "y": 560},
+    "description": "Echinocactus grusonii is a dramatic globe-to-barrel shaped succulent armed with brilliant golden spines along numerous pronounced vertical ribs, known affectionately in botanical folklore as 'Mother-in-Law's Cushion'.",
+    "key_features": [
+      "Spherical to cylindrical ribbed green stem growing over 1 meter tall",
+      "Dense golden-yellow radiating spines on prominent areoles",
+      "Woolly crown atop mature specimens where small yellow diurnal flowers emerge",
+      "Extreme drought adaptation storing hundreds of liters of water"
+    ],
+    "medicinal_uses": "Cultivated purely as an ornamental marvel; critical flagship species for desert ecosystem conservation.",
+    "fun_facts": [
+      "Despite being one of the world's most widely cultivated cacti in domestic landscaping, wild populations were nearly submerged by the Zimapán Dam reservoir in Mexico in the 1990s.",
+      "Golden barrels can survive for over 100 years, gradually shifting from a perfect geometric sphere into an imposing pillar."
+    ],
+    "audio_guide_text": "Behold Echinocactus grusonii, the Golden Barrel. The vertical accordion-like ribs allow the plant to expand during rare desert cloudbursts and shrink during years of relentless drought without tearing its skin.",
+    "poi_near": "Cactus Canyon & Sunken Succulent Bed",
+    "color_profile": "Golden-yellow spines, emerald-lime green ribbed flesh",
+    "prcv_visual_notes": "Repetitive vertical rib frequency (high directional gradient in Sobel Y filter), circular global silhouette (Hu moment 1 ~0.16), and high GLCM correlation."
+  },
+  {
+    "id": "hibiscus",
+    "common_name": "China Rose / Tropical Hibiscus",
+    "scientific_name": "Hibiscus rosa-sinensis",
+    "family": "Malvaceae",
+    "order": "Malvales",
+    "native_region": "Vanuatu and Tropical East Asia",
+    "flowering_season": "Year-round in warm tropical conditions",
+    "habitat": "Tropical and subtropical coasts, forest borders, and gardens",
+    "conservation_status": "Not Evaluated",
+    "sunlight_requirement": "Full Sun to partial shade",
+    "water_requirement": "Consistent moisture, warm humid climate",
+    "zone_id": "zone_tropical",
+    "zone_name": "Subtropical Border & Butterfly Trail",
+    "garden_coords": {"lat": 51.4799, "lng": -0.2959, "x": 550, "y": 170},
+    "description": "Hibiscus rosa-sinensis is a showy evergreen shrub celebrated across the world's tropics for its giant funnel-shaped, paper-thin petals and an unmistakable long staminal column bristling with golden anthers.",
+    "key_features": [
+      "Large solitary five-petaled blossoms up to 15cm across",
+      "Distinctive protruding central staminal column tipped with red stigmas",
+      "Glossy, dark green, ovate leaves with coarsely serrated margins",
+      "Spectacular crimson, coral, yellow, or dual-toned color varieties"
+    ],
+    "medicinal_uses": "Petals are steeped for tart, antioxidant-rich hibiscus tea (Agua de Jamaica) that naturally assists blood pressure regulation; also used in traditional hair tonics.",
+    "fun_facts": [
+      "Hibiscus rosa-sinensis is the national flower of Malaysia (known as Bunga Raya) and plays prominent roles in Pacific Island cultural garlands.",
+      "Each individual blossom typically lasts for only a single glorious day, closing at sunset to be replaced by fresh blooms the following morning."
+    ],
+    "audio_guide_text": "You are along the Butterfly Trail admiring Hibiscus rosa-sinensis. Notice the elongated staminal column jutting far beyond the petals — an evolutionary feature designed so feeding birds and butterflies brush against pollen on their way to nectar.",
+    "poi_near": "Hummingbird Pavilion & Nectar Fountain",
+    "color_profile": "Vivid scarlet red, brilliant yellow anthers, deep green foliage",
+    "prcv_visual_notes": "High contrast between scarlet petals (Hue ~0°/360°) and central golden staminal column, 5-fold petal boundary symmetry, and high color saturation."
+  }
+]

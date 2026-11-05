@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🌿 AI Botanical Garden Navigator | PRCV Project</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+
+  <!-- Leaflet CSS & JS for Interactive Garden Maps -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+  <!-- Chart.js for PRCV Histograms & Benchmarks -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header>
+    <div class="nav-container">
+      <a href="#" class="brand">
+        <div class="brand-icon">🌿</div>
+        <div>
+          <div class="brand-title">AI Botanical Garden Navigator</div>
+          <div style="font-size:0.75rem; color:#059669; font-weight:600;">PRCV Pattern Recognition & Computer Vision</div>
+        </div>
+        <span class="brand-badge">Academic PRCV Edition</span>
+      </a>
+
+      <nav class="nav-tabs">
+        <button class="nav-tab-btn active" data-tab="scanner">
+          <span>📷</span> Scan & Identify
+        </button>
+        <button class="nav-tab-btn" data-tab="map">
+          <span>🗺️</span> Garden Map
+        </button>
+        <button class="nav-tab-btn" data-tab="visual-search">
+          <span>🔍</span> Visual Search
+        </button>
+        <button class="nav-tab-btn" data-tab="prcv-lab">
+          <span>🔬</span> PRCV Research Lab
+        </button>
+        <button class="nav-tab-btn" data-tab="catalog">
+          <span>🌸</span> Flora Catalog
+        </button>
+        <button class="nav-tab-btn" data-tab="tours">
+          <span>🚶</span> Themed Tours
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= TAB 1: SCANNER & AI IDENTIFIER ================= -->
+    <section id="tab-scanner" class="tab-pane active">
+      <div class="section-header">
+        <h1 class="section-title"><span>🌿</span> AI Plant Identification & Smart Guide</h1>
+        <p class="section-subtitle">
+          Point your camera at a flower or leaf, upload a photograph, or test with curated botanical specimens.
+        </p>
+      </div>
+
+      <div class="grid-2">
+        <!-- Input Column -->
+        <div>
+          <div class="card">
+            <div class="card-header">
+              <h2 class="card-title"><span>📷</span> Scan Plant Specimen</h2>
+              <span class="badge-prcv">Multi-Model PRCV</span>
+            </div>
+
+            <!-- Upload Dropzone -->
+            <div id="dropzone" class="dropzone">
+              <div class="dropzone-icon">🍃</div>
+              <div class="dropzone-prompt">Drop a plant photo here, or click to upload</div>
+              <div class="dropzone-sub">Supports JPG, PNG, WEBP (Leaves, flowers, whole plants)</div>
+              <input type="file" id="fileInput" accept="image/*" style="display:none;">
+            </div>
+
+            <!-- WebCam Stream Container -->
+            <div id="cameraBox" class="camera-box">
+              <video id="cameraVideo" autoplay playsinline></video>
+              <div style="padding:10px; text-align:center; background:#1e293b;">
+                <button id="btnSnapPhoto" class="btn btn-accent btn-sm">📸 Capture Photo</button>
+              </div>
+            </div>
+
+            <!-- Image Preview Box -->
+            <div id="previewContainer" class="preview-container">
+              <img id="previewImg" class="preview-img" alt="Selected Plant Preview">
+            </div>
+
+            <!-- Action Controls -->
+            <div class="btn-group">
+              <button id="btnScanPlant" class="btn btn-primary" style="flex:1;">
+                <span>✨ Identify Plant</span>
+              </button>
+              <button id="btnStartCamera" class="btn btn-outline">
+                <span>📷 Use Camera</span>
+              </button>
+            </div>
+
+            <!-- 1-Click Sample Preset Specimen Chips -->
+            <div class="samples-wrapper">
+              <div class="samples-label">⚡ Quick Test Presets (Click any to test instantly):</div>
+              <div id="sampleChips" class="samples-chips">
+                <!-- Dynamically populated -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Output Column -->
+        <div>
+          <!-- Placeholder before scan -->
+          <div id="scanPlaceholder" class="card" style="text-align:center; padding:3rem 1.5rem;">
+            <div style="font-size:3.5rem; margin-bottom:1rem;">🔬</div>
+            <h3 style="font-size:1.25rem; font-weight:700; color:#334155;">Ready for Vision Analysis</h3>
+            <p style="font-size:0.9rem; color:#64748b; margin-top:0.5rem; max-width:400px; margin-inline:auto;">
+              Upload an image or pick a test preset. The PRCV pipeline will extract Color, GLCM Texture, and Hu Moment features, compare Classical SVM against CNN, and calculate the garden walking route.
+            </p>
+          </div>
+
+          <!-- Identified Result Display Card -->
+          <div id="idResultContainer" class="id-result-container">
+            <div class="plant-hero-card">
+              <div class="plant-names">
+                <span id="resCommonName" class="plant-common-name">Plant Name</span>
+                <span id="resScientificName" class="plant-scientific-name">Scientific Name</span>
+              </div>
+
+              <div class="meta-tags">
+                <span class="meta-tag">🌿 Family: <b id="resFamily">-</b></span>
+                <span class="meta-tag">📍 Zone: <b id="resZone">-</b></span>
+                <span class="meta-tag">🌸 Season: <b id="resSeason">-</b></span>
+              </div>
+
+              <p id="resDescription" style="font-size:0.9rem; color:#1f2937; margin:0.75rem 0; line-height:1.6;">
+                Plant botanical description will appear here.
+              </p>
+
+              <!-- Audio Guide with Text-to-Speech -->
+              <div class="audio-guide-box">
+                <div style="display:flex; align-items:center; gap:0.5rem;">
+                  <span style="font-size:1.4rem;">🎧</span>
+                  <div>
+                    <div style="font-size:0.75rem; font-weight:700; color:#065f46; text-transform:uppercase;">Botanist Audio Guide</div>
+                    <div id="resAudioText" class="audio-guide-text">"Welcome to the Botanical Garden..."</div>
+                  </div>
+                </div>
+                <button id="btnPlayAudioGuide" class="btn btn-outline btn-sm" style="white-space:nowrap;">
+                  <span>🔊 Play Audio Guide</span>
+                </button>
+              </div>
+
+              <!-- Direct Navigate Button -->
+              <div style="margin-top:1.2rem;">
+                <button id="btnNavigateToPlant" class="btn btn-primary" style="width:100%; font-size:1rem; padding:0.8rem;">
+                  <span>📍 Navigate to Plant on Garden Map</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Model Consensus Badges -->
+            <div class="model-comparison-box">
+              <div class="card-title" style="font-size:1rem; margin-bottom:0.25rem;">
+                <span>⚖️</span> PRCV Model Consensus Comparison
+              </div>
+              <div class="comparison-grid">
+                <div class="model-badge-card primary-winner">
+                  <div class="model-badge-name">Classical SVM (RBF)</div>
+                  <div id="scoreSVM" class="model-badge-score">--%</div>
+                  <div id="predSVM" class="model-badge-pred">-</div>
+                </div>
+                <div class="model-badge-card">
+                  <div class="model-badge-name">Deep CNN</div>
+                  <div id="scoreCNN" class="model-badge-score">--%</div>
+                  <div id="predCNN" class="model-badge-pred">-</div>
+                </div>
+                <div class="model-badge-card">
+                  <div class="model-badge-name">KNN (k=3)</div>
+                  <div id="scoreKNN" class="model-badge-score">--%</div>
+                </div>
+                <div class="model-badge-card">
+                  <div class="model-badge-name">Random Forest</div>
+                  <div id="scoreRF" class="model-badge-score">--%</div>
+                </div>
+              </div>
+
+              <!-- Top Candidate Species -->
+              <div class="candidates-list">
+                <div style="font-size:0.8rem; font-weight:700; color:#64748b; text-transform:uppercase; margin-bottom:0.4rem;">
+                  Top Candidate Probabilities:
+                </div>
+                <div id="topCandidatesList">
+                  <!-- Populated dynamically -->
+                </div>
+              </div>
+            </div>
+
+            <!-- Handcrafted Features Summary -->
+            <div class="card" style="padding:1rem;">
+              <div style="font-size:0.85rem; font-weight:700; color:#1e293b; margin-bottom:0.4rem;">
+                🔬 Extracted Handcrafted PRCV Features:
+              </div>
+              <div class="features-strip">
+                <div class="feature-pill">
+                  Colors: <span id="resDominantColors" class="color-swatches"></span>
+                </div>
+                <div id="resTextureFeatures" class="feature-pill">Texture: Contrast 0.12 | Energy 0.45</div>
+                <div id="resShapeFeatures" class="feature-pill">Shape: Solidity 0.91 | Circularity 0.72</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TAB 2: INTERACTIVE GARDEN MAP ================= -->
+    <section id="tab-map" class="tab-pane">
+      <div class="section-header">
+        <h1 class="section-title"><span>🗺️</span> Interactive Botanical Garden Navigator</h1>
+        <p class="section-subtitle">
+          Explore botanical biomes, locate living plant specimens, and follow smart shortest-path walking routes computed using Dijkstra's algorithm.
+        </p>
+      </div>
+
+      <div class="map-layout">
+        <!-- Navigation Controls Sidebar -->
+        <div class="map-sidebar">
+          <div class="card">
+            <div class="card-header">
+              <h2 class="card-title"><span>🧭</span> Route Planner</h2>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="startNodeSelect">Departing From:</label>
+              <select id="startNodeSelect" class="form-select">
+                <option value="N_ENTRANCE">Grand Welcome Entrance Plaza</option>
+                <option value="N_CENTRAL_CAFE">Glasshouse Garden Café Hub</option>
+                <option value="N_MEDICINAL_JUNCTION">Medicinal Garden Plaza</option>
+                <option value="N_ROSE_PORTAL">Heritage Rose Archway</option>
+                <option value="N_TROPICAL_DOME">Rainforest Conservatory</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="destPlantSelect">Destination Plant:</label>
+              <select id="destPlantSelect" class="form-select">
+                <option value="">-- Choose Target Plant --</option>
+              </select>
+            </div>
+
+            <button onclick="requestRouteToPlant(document.getElementById('destPlantSelect').value)" class="btn btn-primary" style="width:100%; margin-top:0.4rem;">
+              <span>🚶 Find Walking Route</span>
+            </button>
+          </div>
+
+          <!-- Active Route Statistics Card -->
+          <div id="routeInfoBox" class="card" style="display:none;">
+            <div style="font-weight:700; color:#064e3b; font-size:15px; display:flex; justify-content:space-between; align-items:center;">
+              <span>Path to <span id="routeTargetName">-</span></span>
+              <span class="badge-prcv">Dijkstra Shortest</span>
+            </div>
+
+            <div class="route-stats">
+              <div class="stat-item">
+                <div id="routeDistance" class="stat-num">0 m</div>
+                <div class="stat-sub">Distance</div>
+              </div>
+              <div class="stat-item">
+                <div id="routeTime" class="stat-num">0 min</div>
+                <div class="stat-sub">Walk Time</div>
+              </div>
+            </div>
+
+            <div style="margin-top:0.75rem;">
+              <button id="btnSimulateWalk" class="btn btn-accent btn-sm" style="width:100%;">
+                <span>🏃 Simulate Walking Path</span>
+              </button>
+            </div>
+
+            <div style="font-size:0.78rem; font-weight:700; color:#64748b; text-transform:uppercase; margin-top:0.75rem;">
+              Turn-by-Turn Guidance:
+            </div>
+            <ol id="stepInstructions" class="step-directions">
+              <!-- Directions list -->
+            </ol>
+          </div>
+
+          <!-- Garden Legend -->
+          <div class="card" style="padding:1rem;">
+            <div style="font-size:0.82rem; font-weight:700; color:#334155; margin-bottom:0.5rem;">Garden Biome Legend:</div>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.4rem; font-size:0.75rem;">
+              <div><span style="color:#059669;">■</span> Rainforest Dome</div>
+              <div><span style="color:#f43f5e;">■</span> Rose Parterre</div>
+              <div><span style="color:#0284c7;">■</span> Lotus Pond</div>
+              <div><span style="color:#f97316;">■</span> Desert Glasshouse</div>
+              <div><span style="color:#d97706;">■</span> Zen Bonsai Garden</div>
+              <div><span style="color:#eab308;">■</span> Sunny Meadow</div>
+              <div><span style="color:#8b5cf6;">■</span> Medicinal Herbarium</div>
+              <div><span style="color:#ec4899;">■</span> Orchidarium</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Map Container -->
+        <div>
+          <div id="gardenMap"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TAB 3: VISUAL PLANT SEARCH ================= -->
+    <section id="tab-visual-search" class="tab-pane">
+      <div class="section-header">
+        <h1 class="section-title"><span>🔍</span> Visual Plant Search (CBIR)</h1>
+        <p class="section-subtitle">
+          Content-Based Image Retrieval: Search the entire botanical collection using image similarity without knowing plant names.
+        </p>
+      </div>
+
+      <div class="grid-2">
+        <div>
+          <div class="card">
+            <div class="card-header">
+              <h2 class="card-title"><span>🖼️</span> Query Image</h2>
+            </div>
+
+            <div id="vsDropzone" class="dropzone">
+              <div class="dropzone-icon">🔍</div>
+              <div class="dropzone-prompt">Upload an image to search the collection</div>
+              <div class="dropzone-sub">Extracts normalized feature vector and compares via Cosine Similarity</div>
+              <input type="file" id="vsFileInput" accept="image/*" style="display:none;">
+            </div>
+
+            <div id="vsPreviewContainer" class="preview-container">
+              <img id="vsPreviewImg" class="preview-img" alt="Search Query Preview">
+            </div>
+
+            <button id="btnRunVisualSearch" class="btn btn-primary" style="width:100%; margin-top:1rem;">
+              <span>🔍 Search Garden Collection</span>
+            </button>
+          </div>
+        </div>
+
+        <div>
+          <div class="card">
+            <div class="card-header">
+              <h2 class="card-title"><span>📊</span> Ranked Visual Similarity Matches</h2>
+              <span class="badge-prcv">Cosine Metric</span>
+            </div>
+
+            <div id="vsResultsGrid" class="grid-4" style="grid-template-columns:1fr; gap:0.75rem;">
+              <p style="color:#64748b; font-size:0.9rem; text-align:center; padding:2rem 0;">
+                Select or upload a query image to retrieve closest visual matches from the garden database.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TAB 4: PRCV RESEARCH LAB ================= -->
+    <section id="tab-prcv-lab" class="tab-pane">
+      <div class="section-header">
+        <h1 class="section-title"><span>🔬</span> PRCV Research Lab & Academic Performance Inspector</h1>
+        <p class="section-subtitle">
+          In-depth academic analysis of the computer vision pipeline: step-by-step image preprocessing, mathematical feature extraction (HSV, GLCM, Hu Moments), and SVM vs CNN evaluation.
+        </p>
+      </div>
+
+      <!-- Step-by-Step Preprocessing Visualizer -->
+      <div class="card" style="margin-bottom:1.5rem;">
+        <div class="card-header">
+          <h2 class="card-title"><span>🖼️</span> Image Preprocessing & Segmentation Pipeline (8 Stages)</h2>
+          <span class="badge-prcv">OpenCV Core</span>
+        </div>
+        <p style="font-size:0.85rem; color:#64748b;">
+          Every uploaded botanical photograph undergoes standardized preprocessing to ensure lighting invariance, noise suppression, and foreground leaf/flower isolation.
+        </p>
+
+        <div id="pipelineVisualGrid" class="pipeline-grid">
+          <!-- Populated dynamically with 8 transformation cards -->
+        </div>
+      </div>
+
+      <!-- Live Feature Extraction Charts -->
+      <div class="grid-3" style="margin-bottom:1.5rem;">
+        <!-- HSV Color Histogram -->
+        <div class="chart-box">
+          <div style="font-weight:700; color:#1e293b; font-size:0.95rem; margin-bottom:0.5rem;">
+            🌈 HSV Color Space Histogram
+          </div>
+          <canvas id="hsvChartCanvas" height="180"></canvas>
+          <div style="font-size:0.75rem; color:#64748b; margin-top:0.5rem;">
+            Normalized 32-bin Hue & 16-bin Saturation distributions capturing floral pigments.
+          </div>
+        </div>
+
+        <!-- GLCM Haralick Texture Radar -->
+        <div class="chart-box">
+          <div style="font-weight:700; color:#1e293b; font-size:0.95rem; margin-bottom:0.5rem;">
+            🕸️ GLCM Haralick Texture Profile
+          </div>
+          <canvas id="glcmChartCanvas" height="180"></canvas>
+          <div style="font-size:0.75rem; color:#64748b; margin-top:0.5rem;">
+            Gray-Level Co-occurrence Matrix properties (Contrast, Energy, Homogeneity, Correlation).
+          </div>
+        </div>
+
+        <!-- Shape & Hu Moments Inspector -->
+        <div class="chart-box">
+          <div style="font-weight:700; color:#1e293b; font-size:0.95rem; margin-bottom:0.5rem;">
+            📐 Morphological & Hu Invariant Moments
+          </div>
+          <div id="shapeMetricsStats" style="padding:0.5rem 0;">
+            <div style="color:#64748b; font-size:0.85rem;">Run image analysis to inspect shape moments.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Academic Performance Benchmarking -->
+      <div class="grid-2">
+        <!-- Metrics Comparison Table -->
+        <div class="card">
+          <div class="card-header">
+            <h2 class="card-title"><span>📊</span> Model Comparison Benchmark</h2>
+            <span class="badge-prcv">Test Set Evaluation</span>
+          </div>
+
+          <table style="width:100%; border-collapse:collapse; font-size:0.85rem; text-align:left;">
+            <thead>
+              <tr style="background:#f8fafc; border-bottom:2px solid #e2e8f0;">
+                <th style="padding:8px 10px;">Model</th>
+                <th style="padding:8px 10px;">Feature Space</th>
+                <th style="padding:8px 10px;">Accuracy</th>
+                <th style="padding:8px 10px;">Precision</th>
+                <th style="padding:8px 10px;">Recall</th>
+                <th style="padding:8px 10px;">F1-Score</th>
+              </tr>
+            </thead>
+            <tbody id="metricsTableBody">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+
+          <div style="margin-top:1.25rem;">
+            <div style="font-weight:700; font-size:0.85rem; color:#334155; margin-bottom:0.4rem;">
+              🎓 Key Academic Insights for Submission:
+            </div>
+            <ul id="academicInsightsList" style="font-size:0.82rem; color:#475569; padding-left:1.2rem; line-height:1.6;">
+              <!-- Insights list -->
+            </ul>
+          </div>
+        </div>
+
+        <!-- Confusion Matrix & Latency Chart -->
+        <div class="card">
+          <div class="card-header">
+            <h2 class="card-title"><span>🎯</span> Confusion Matrix & Inference Latency</h2>
+          </div>
+
+          <div style="font-size:0.85rem; font-weight:700; color:#334155; margin-bottom:0.3rem;">
+            Classical SVM 10x10 Confusion Matrix:
+          </div>
+          <div id="confusionMatrixBox" style="overflow-x:auto;">
+            <!-- Rendered confusion matrix -->
+          </div>
+
+          <div style="margin-top:1.25rem;">
+            <div style="font-size:0.85rem; font-weight:700; color:#334155; margin-bottom:0.3rem;">
+              ⏱️ Per-Image Inference Latency:
+            </div>
+            <canvas id="latencyChartCanvas" height="120"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TAB 5: BOTANICAL CATALOG ================= -->
+    <section id="tab-catalog" class="tab-pane">
+      <div class="section-header">
+        <h1 class="section-title"><span>🌸</span> Living Plant Collection Directory</h1>
+        <p class="section-subtitle">
+          Explore botanical specifications, flowering calendars, traditional pharmacopeia, and ecological trivia.
+        </p>
+      </div>
+
+      <div class="card" style="margin-bottom:1.25rem; padding:1rem;">
+        <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+          <input type="text" id="catalogSearch" class="form-input" placeholder="Search by common name, scientific name, or family..." style="flex:2;">
+          <select id="catalogZoneFilter" class="form-select" style="flex:1;">
+            <option value="all">All Garden Biomes</option>
+            <option value="zone_tropical">Tropical Rainforest Conservatory</option>
+            <option value="zone_rose">Heritage Rose Parterre</option>
+            <option value="zone_aquatic">Lotus & Water Lily Haven</option>
+            <option value="zone_succulent">Arid & Desert Glasshouse</option>
+            <option value="zone_zen">Zen Bonsai & Japanese Garden</option>
+            <option value="zone_meadow">Sunny Arboretum & Meadow</option>
+            <option value="zone_medicinal">Aromatic & Medicinal Herbarium</option>
+            <option value="zone_orchid">Orchidarium & Epiphyte House</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="catalogGrid" class="grid-4">
+        <!-- Dynamically rendered plant cards -->
+      </div>
+    </section>
+
+    <!-- ================= TAB 6: THEMED TOURS ================= -->
+    <section id="tab-tours" class="tab-pane">
+      <div class="section-header">
+        <h1 class="section-title"><span>🚶</span> Curated Themed Botanical Tours</h1>
+        <p class="section-subtitle">
+          Choose a thematic trail tailored to your schedule and scientific interests with intelligent multi-stop pathfinding.
+        </p>
+      </div>
+
+      <div id="toursList" class="grid-2">
+        <!-- Populated dynamically with tour itineraries -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div style="max-width:1380px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+      <div>
+        <b>🌿 AI Botanical Garden Navigator</b> &mdash; PRCV Academic Project Submission
+      </div>
+      <div>
+        Stack: <span class="badge-prcv">OpenCV</span> <span class="badge-prcv">Scikit-Learn (SVM/KNN)</span> <span class="badge-prcv">TensorFlow CNN</span> <span class="badge-prcv">FastAPI</span> <span class="badge-prcv">Leaflet.js</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application Scripts -->
+  <script src="/static/js/map.js"></script>
+  <script src="/static/js/prcv_lab.js"></script>
+  <script src="/static/js/app.js"></script>
+</body>
+</html>

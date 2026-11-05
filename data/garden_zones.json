@@ -1,0 +1,267 @@
+{
+  "garden_info": {
+    "name": "Kew-Heritage Royal AI Botanical Gardens",
+    "description": "A 120-acre living plant sanctuary featuring over 10 distinct microclimates, historic Victorian glasshouses, aquatic ecosystems, and world-class botanical research collections.",
+    "center": {"lat": 51.4788, "lng": -0.2970},
+    "default_zoom": 17,
+    "width": 1000,
+    "height": 700
+  },
+  "zones": [
+    {
+      "id": "zone_entrance",
+      "name": "Grand Entrance Plaza & Welcome Pavillion",
+      "color": "#10b981",
+      "description": "Visitor ticketing, botanical shop, orientation terrace, and main access hub.",
+      "coordinates": [
+        [51.4770, -0.2995],
+        [51.4770, -0.2985],
+        [51.4760, -0.2985],
+        [51.4760, -0.2995]
+      ],
+      "svg_box": {"x": 50, "y": 550, "w": 180, "h": 120}
+    },
+    {
+      "id": "zone_orchid",
+      "name": "Orchidarium & Epiphyte House",
+      "color": "#ec4899",
+      "description": "Climate-controlled misted glasshouse containing rare orchids and epiphytic ferns.",
+      "coordinates": [
+        [51.4795, -0.2995],
+        [51.4795, -0.2982],
+        [51.4788, -0.2982],
+        [51.4788, -0.2995]
+      ],
+      "svg_box": {"x": 120, "y": 160, "w": 140, "h": 110}
+    },
+    {
+      "id": "zone_tropical",
+      "name": "Tropical Rainforest Conservatory",
+      "color": "#059669",
+      "description": "Soaring palm dome housing towering jungle canopies, lianas, and Monstera species.",
+      "coordinates": [
+        [51.4802, -0.2983],
+        [51.4802, -0.2965],
+        [51.4792, -0.2965],
+        [51.4792, -0.2983]
+      ],
+      "svg_box": {"x": 300, "y": 130, "w": 190, "h": 140}
+    },
+    {
+      "id": "zone_rose",
+      "name": "Heritage Rose Parterre",
+      "color": "#f43f5e",
+      "description": "Classic geometric French parterre planted with antique and fragrant rose cultivars.",
+      "coordinates": [
+        [51.4788, -0.2992],
+        [51.4788, -0.2978],
+        [51.4780, -0.2978],
+        [51.4780, -0.2992]
+      ],
+      "svg_box": {"x": 150, "y": 280, "w": 160, "h": 120}
+    },
+    {
+      "id": "zone_zen",
+      "name": "Zen Bonsai & Japanese Garden",
+      "color": "#d97706",
+      "description": "Raked karesansui gravel gardens, red arch bridges, and sculptural Japanese Maples.",
+      "coordinates": [
+        [51.4812, -0.2975],
+        [51.4812, -0.2958],
+        [51.4803, -0.2958],
+        [51.4803, -0.2975]
+      ],
+      "svg_box": {"x": 420, "y": 40, "w": 170, "h": 110}
+    },
+    {
+      "id": "zone_aquatic",
+      "name": "Lotus & Water Lily Haven",
+      "color": "#0284c7",
+      "description": "Tranquil freshwater ponds with floating boardwalks, sacred lotuses, and Victoria lilies.",
+      "coordinates": [
+        [51.4794, -0.2960],
+        [51.4794, -0.2942],
+        [51.4783, -0.2942],
+        [51.4783, -0.2960]
+      ],
+      "svg_box": {"x": 550, "y": 220, "w": 180, "h": 140}
+    },
+    {
+      "id": "zone_meadow",
+      "name": "Sunny Arboretum & Pollinator Meadow",
+      "color": "#eab308",
+      "description": "Open rolling wildflower meadows, sun-drenched sunflower beds, and apiary hives.",
+      "coordinates": [
+        [51.4808, -0.2952],
+        [51.4808, -0.2935],
+        [51.4796, -0.2935],
+        [51.4796, -0.2952]
+      ],
+      "svg_box": {"x": 680, "y": 80, "w": 190, "h": 140}
+    },
+    {
+      "id": "zone_medicinal",
+      "name": "Aromatic & Medicinal Herbarium",
+      "color": "#8b5cf6",
+      "description": "Historical apothecary plots, lavender terraces, and medicinal phytochemical plants.",
+      "coordinates": [
+        [51.4783, -0.2980],
+        [51.4783, -0.2963],
+        [51.4773, -0.2963],
+        [51.4773, -0.2980]
+      ],
+      "svg_box": {"x": 280, "y": 380, "w": 160, "h": 110}
+    },
+    {
+      "id": "zone_succulent",
+      "name": "Arid & Desert Glasshouse",
+      "color": "#f97316",
+      "description": "Dry volcanic rockery housing cacti, agaves, and Aloe vera from global deserts.",
+      "coordinates": [
+        [51.4776, -0.2987],
+        [51.4776, -0.2970],
+        [51.4764, -0.2970],
+        [51.4764, -0.2987]
+      ],
+      "svg_box": {"x": 210, "y": 480, "w": 170, "h": 120}
+    }
+  ],
+  "points_of_interest": [
+    {
+      "id": "poi_visitor_center",
+      "name": "Main Visitor Center & Ticket Desk",
+      "type": "entrance",
+      "coords": {"lat": 51.4765, "lng": -0.2990, "x": 120, "y": 610},
+      "icon": "ticket"
+    },
+    {
+      "id": "poi_botanic_cafe",
+      "name": "Glasshouse Garden Café & Tea Room",
+      "type": "food",
+      "coords": {"lat": 51.4788, "lng": -0.2970, "x": 450, "y": 310},
+      "icon": "coffee"
+    },
+    {
+      "id": "poi_restrooms",
+      "name": "Visitor Restrooms & First Aid",
+      "type": "facility",
+      "coords": {"lat": 51.4774, "lng": -0.2989, "x": 180, "y": 530},
+      "icon": "help-circle"
+    },
+    {
+      "id": "poi_lotus_bridge",
+      "name": "Lotus Boardwalk & Floating Pavilion",
+      "type": "viewpoint",
+      "coords": {"lat": 51.4787, "lng": -0.2955, "x": 600, "y": 270},
+      "icon": "eye"
+    },
+    {
+      "id": "poi_zen_bridge",
+      "name": "Moon Bridge & Tea House",
+      "type": "viewpoint",
+      "coords": {"lat": 51.4806, "lng": -0.2965, "x": 500, "y": 80},
+      "icon": "eye"
+    }
+  ],
+  "graph": {
+    "nodes": {
+      "N_ENTRANCE": {"name": "Entrance Plaza", "lat": 51.4765, "lng": -0.2990, "x": 120, "y": 610},
+      "N_JUNCTION_SOUTH": {"name": "South Junction", "lat": 51.4772, "lng": -0.2985, "x": 220, "y": 550},
+      "N_SUCCULENT_GATE": {"name": "Desert House Portal", "lat": 51.4772, "lng": -0.2978, "x": 270, "y": 520},
+      "P_ALOE_VERA": {"name": "True Aloe Bed", "lat": 51.4772, "lng": -0.2982, "x": 260, "y": 510, "plant_id": "aloe_vera"},
+      "P_CACTUS": {"name": "Golden Barrel Cactus Bed", "lat": 51.4768, "lng": -0.2975, "x": 310, "y": 560, "plant_id": "cactus"},
+      
+      "N_MEDICINAL_JUNCTION": {"name": "Medicinal Garden Plaza", "lat": 51.4778, "lng": -0.2975, "x": 330, "y": 440},
+      "P_LAVENDER": {"name": "Lavender Field", "lat": 51.4778, "lng": -0.2972, "x": 350, "y": 420, "plant_id": "lavender"},
+      
+      "N_ROSE_PORTAL": {"name": "Rose Garden Archway", "lat": 51.4783, "lng": -0.2985, "x": 230, "y": 350},
+      "P_ROSE": {"name": "Heritage French Rose Bed", "lat": 51.4785, "lng": -0.2985, "x": 220, "y": 320, "plant_id": "rose"},
+      
+      "N_ORCHID_PORTAL": {"name": "Orchidarium Gateway", "lat": 51.4790, "lng": -0.2990, "x": 180, "y": 240},
+      "P_ORCHID": {"name": "Moth Orchid Showcase", "lat": 51.4792, "lng": -0.2988, "x": 190, "y": 210, "plant_id": "orchid"},
+      
+      "N_CENTRAL_CAFE": {"name": "Central Promenade Cafe Hub", "lat": 51.4788, "lng": -0.2970, "x": 450, "y": 310},
+      
+      "N_TROPICAL_DOME": {"name": "Rainforest Conservatory Entrance", "lat": 51.4794, "lng": -0.2975, "x": 370, "y": 210},
+      "P_MONSTERA": {"name": "Monstera Jungle Canopy", "lat": 51.4796, "lng": -0.2978, "x": 380, "y": 180, "plant_id": "monstera"},
+      
+      "N_AQUATIC_DECK": {"name": "Lotus Boardwalk Entrance", "lat": 51.4787, "lng": -0.2958, "x": 580, "y": 290},
+      "P_LOTUS": {"name": "Sacred Lotus Lagoon", "lat": 51.4789, "lng": -0.2952, "x": 620, "y": 280, "plant_id": "lotus"},
+      
+      "N_ZEN_PATH": {"name": "Zen Bamboo Alley", "lat": 51.4804, "lng": -0.2970, "x": 470, "y": 120},
+      "P_JAPANESE_MAPLE": {"name": "Crimson Japanese Maple Grove", "lat": 51.4808, "lng": -0.2968, "x": 490, "y": 90, "plant_id": "japanese_maple"},
+      
+      "N_MEADOW_CROSSING": {"name": "Meadow Trail Crossing", "lat": 51.4798, "lng": -0.2955, "x": 570, "y": 180},
+      "P_HIBISCUS": {"name": "Tropical Hibiscus Border", "lat": 51.4799, "lng": -0.2959, "x": 550, "y": 170, "plant_id": "hibiscus"},
+      "P_SUNFLOWER": {"name": "Sunflower Golden Field", "lat": 51.4802, "lng": -0.2945, "x": 750, "y": 140, "plant_id": "sunflower"}
+    },
+    "edges": [
+      {"from": "N_ENTRANCE", "to": "N_JUNCTION_SOUTH", "distance_meters": 85, "path_name": "Grand Welcome Avenue"},
+      {"from": "N_JUNCTION_SOUTH", "to": "N_SUCCULENT_GATE", "distance_meters": 45, "path_name": "Desert Walk"},
+      {"from": "N_SUCCULENT_GATE", "to": "P_ALOE_VERA", "distance_meters": 20, "path_name": "Aloe Terrace"},
+      {"from": "N_SUCCULENT_GATE", "to": "P_CACTUS", "distance_meters": 35, "path_name": "Cactus Canyon Path"},
+      {"from": "N_JUNCTION_SOUTH", "to": "N_MEDICINAL_JUNCTION", "distance_meters": 95, "path_name": "Apothecary Way"},
+      {"from": "N_MEDICINAL_JUNCTION", "to": "P_LAVENDER", "distance_meters": 25, "path_name": "Lavender Row"},
+      {"from": "N_JUNCTION_SOUTH", "to": "N_ROSE_PORTAL", "distance_meters": 110, "path_name": "South Rose Promenade"},
+      {"from": "N_ROSE_PORTAL", "to": "P_ROSE", "distance_meters": 25, "path_name": "Parterre Path"},
+      {"from": "N_ROSE_PORTAL", "to": "N_ORCHID_PORTAL", "distance_meters": 90, "path_name": "Flora Arcade"},
+      {"from": "N_ORCHID_PORTAL", "to": "P_ORCHID", "distance_meters": 30, "path_name": "Epiphyte Gallery"},
+      {"from": "N_ROSE_PORTAL", "to": "N_CENTRAL_CAFE", "distance_meters": 80, "path_name": "Terrace Walk"},
+      {"from": "N_MEDICINAL_JUNCTION", "to": "N_CENTRAL_CAFE", "distance_meters": 90, "path_name": "Herb Garden Walkway"},
+      {"from": "N_CENTRAL_CAFE", "to": "N_TROPICAL_DOME", "distance_meters": 75, "path_name": "Conservatory Avenue"},
+      {"from": "N_TROPICAL_DOME", "to": "P_MONSTERA", "distance_meters": 30, "path_name": "Palm House Boardwalk"},
+      {"from": "N_ORCHID_PORTAL", "to": "N_TROPICAL_DOME", "distance_meters": 70, "path_name": "Greenhouse Link Corridor"},
+      {"from": "N_CENTRAL_CAFE", "to": "N_AQUATIC_DECK", "distance_meters": 115, "path_name": "Lake View Way"},
+      {"from": "N_AQUATIC_DECK", "to": "P_LOTUS", "distance_meters": 40, "path_name": "Lotus Boardwalk"},
+      {"from": "N_TROPICAL_DOME", "to": "N_ZEN_PATH", "distance_meters": 90, "path_name": "Bamboo Sanctuary Path"},
+      {"from": "N_ZEN_PATH", "to": "P_JAPANESE_MAPLE", "distance_meters": 35, "path_name": "Zen Stepping Stones"},
+      {"from": "N_TROPICAL_DOME", "to": "N_MEADOW_CROSSING", "distance_meters": 85, "path_name": "Subtropical Walk"},
+      {"from": "N_MEADOW_CROSSING", "to": "P_HIBISCUS", "distance_meters": 20, "path_name": "Butterfly Border"},
+      {"from": "N_MEADOW_CROSSING", "to": "N_AQUATIC_DECK", "distance_meters": 95, "path_name": "Waterside Trail"},
+      {"from": "N_MEADOW_CROSSING", "to": "P_SUNFLOWER", "distance_meters": 110, "path_name": "Meadow Breeze Lane"},
+      {"from": "N_ZEN_PATH", "to": "P_SUNFLOWER", "distance_meters": 130, "path_name": "Arboretum Ridge Way"}
+    ]
+  },
+  "themed_tours": [
+    {
+      "id": "tour_highlights",
+      "title": "Garden Highlights & Wonders Tour",
+      "duration_minutes": 35,
+      "distance_meters": 680,
+      "description": "The quintessential garden journey covering the most celebrated specimens across tropical, rose, aquatic, and desert biomes.",
+      "stops": ["P_ROSE", "P_MONSTERA", "P_LOTUS", "P_SUNFLOWER", "P_ALOE_VERA"],
+      "difficulty": "Easy",
+      "accessibility": "100% Paved & Wheelchair Accessible"
+    },
+    {
+      "id": "tour_medicinal",
+      "title": "Ethnobotany & Healing Flora Tour",
+      "duration_minutes": 30,
+      "distance_meters": 540,
+      "description": "Uncover how ancient and modern pharmacopeias rely on natural plant biochemistries: soothing lavender, wound-healing aloe, and antioxidant hibiscus.",
+      "stops": ["P_ALOE_VERA", "P_LAVENDER", "P_ROSE", "P_HIBISCUS"],
+      "difficulty": "Easy",
+      "accessibility": "Wheelchair Accessible"
+    },
+    {
+      "id": "tour_exotic_blooms",
+      "title": "Colors of the Garden: Blooms & Symmetry Tour",
+      "duration_minutes": 45,
+      "distance_meters": 780,
+      "description": "A visual feast of floral architecture, exploring radiant sunflower Fibonacci spirals, zygomorphic orchids, and pristine floating lotuses.",
+      "stops": ["P_ORCHID", "P_ROSE", "P_HIBISCUS", "P_LOTUS", "P_SUNFLOWER"],
+      "difficulty": "Moderate",
+      "accessibility": "Boardwalks & Stepping Stones"
+    },
+    {
+      "id": "tour_climate_extremes",
+      "title": "Climate Extremes: Rainforest to Desert Tour",
+      "duration_minutes": 25,
+      "distance_meters": 460,
+      "description": "Witness how plants adapt to opposite atmospheric conditions — from humid rainforest epiphytes to drought-enduring ribbed cacti.",
+      "stops": ["P_CACTUS", "P_ALOE_VERA", "P_MONSTERA", "P_ORCHID"],
+      "difficulty": "Easy",
+      "accessibility": "Paved glasshouse walkways"
+    }
+  ]
+}
