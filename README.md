@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🌿 AI Botanical Garden Navigator
 ### A Pattern Recognition and Computer Vision (PRCV) Project
 
@@ -179,3 +180,6 @@ python -m backend.dataset_builder
 * `GET /api/tours` &mdash; Returns curated themed walking tours.
 * `GET /api/tours/{id}/route` &mdash; Returns multi-stop itinerary and path coordinates for a tour.
 * `GET /api/prcv/metrics` &mdash; Returns the academic evaluation report (accuracy, confusion matrix, latency).
+=======
+# AIBotanicalGardenNEW
+>>>>>>> 47f6eb17ce86cd99677078bf1d5bb71a55cd9bdd
